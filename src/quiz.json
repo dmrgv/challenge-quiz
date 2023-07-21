@@ -1,0 +1,214 @@
+{
+  "questions": [
+    {
+      "question": "What does the following code do?<br /><code>createApp({}).mount(\"#app\")</code>",
+      "options": [
+        "Adds the Vue.js library to a project",
+        "Mounts a Vue component to a parent component called app",
+        "Creates an application instance and mounts it to the DOM",
+        "Defines a reactive variable called app"
+      ],
+      "answer": ["Creates an application instance and mounts it to the DOM"]
+    },
+    {
+      "question": "What is the CLI command to create a new Vue.js SPA with the official Vue project scaffolding tool (create-vue)?",
+      "options": [
+        "vue create my-project",
+        "npm create vue-project",
+        "npm init vue@latest",
+        "vue-cli init my-project"
+      ],
+      "answer": ["npm init vue@latest"]
+    },
+    {
+      "question": "When is it necessary to use .value?",
+      "options": [
+        "When accessing the value of data declared with reactive()",
+        "When setting the value of a ref in the script section",
+        "When accessing the value of a ref in the template",
+        "When using v-if conditionally render an element"
+      ],
+      "answer": ["When setting the value of a ref in the script section"]
+    },
+    {
+      "question": "What is the shorthand for v-bind?",
+      "options": [
+        "a colon (:)",
+        "an ampersand (&)",
+        "a semicolon (;)",
+        "a question mark (?)"
+      ],
+      "answer": ["a colon (:)"]
+    },
+    {
+      "question": "What is the rendered HTML for the following code block?<br /><code>&lt;script setup&gt;<br />const html = \"&lt;p&gt;&lt;/p&gt;\";<br />&lt;/script&gt;<br />&lt;template&gt;<br />&lt;div&gt;\n  {{ html }}\n&lt;/div&gt;<br />&lt;/template&gt;</code>",
+      "options": [
+        "<div><p></p></div>",
+        "<div>&lt;p&gt;&lt;/p&gt;</div>",
+        "<p></p>",
+        "<div><span></span></div>"
+      ],
+      "answer": ["<div>&lt;p&gt;&lt;/p&gt;</div>"]
+    },
+    {
+      "question": "Given the following code block, what will the value of `event` be?<br /><code>function handleClick (event) { <br />// ...<br /> } <br /><br /> &lt;button @click=\"handleClick({ id: '1234' })\">Click Me&lt;/button&gt;</code>",
+      "options": [
+        "A handler function",
+        "A native JavaScript click event object",
+        "A custom object",
+        "undefined"
+      ],
+      "answer": ["A custom object"]
+    },
+    {
+      "question": "Given the following code, which of the following triggers the function, on a click event?<br /><code>function onClick () { <br />// ...<br /> }</code>",
+      "options": [
+        "<SomeCoolComponent v-model:update=\"onClick\" />",
+        "<SomeCoolComponent v-on:click=\"onClick\" />",
+        "<SomeCoolComponent v-event:click=\"onClick\" />",
+        "<SomeCoolComponent v-on=\"onClick\" />"
+      ],
+      "answer": ["<SomeCoolComponent v-on:click=\"onClick\" />"]
+    },
+    {
+      "question": "Which of the following code blocks is the equivalent of the given example?<br /><code>&lt;input type=\"text\" v-model=\"myModelValue\"/&gt;&lt;/code&gt;",
+      "options": [
+        "<input \n\ttype=\"text\" \n\t:value=\"myModelValue\" \n\t@input=\"event => myModelValue = event.target.value\"\n/>",
+        "<input \n\ttype=\"text\" \n\t@value=\"myModelValue\" \n\t:input=\"event => myModelValue = event.target.value\"\n/>",
+        "<input \n\ttype=\"text\" \n\t:modelValue=\"myModelValue\" \n\t@update:input=\"event => myModelValue = event.target.value\"\n/>",
+        "<input\n\ttype=\"text\"\n\t:value=\"{ value: myModelValue, '@input': (event) => event.target.value }\"\n/>"
+      ],
+      "answer": ["<input \n\ttype=\"text\" \n\t:value=\"myModelValue\" \n\t@input=\"event => myModelValue = event.target.value\"\n/>"]
+    },
+    {
+      "question": "Which shorthand form is used to attach a click event listener to an element in Vue.js?",
+      "options": [
+        "@click",
+        "@mouse",
+        "@event",
+        "@handler"
+      ],
+      "answer": ["@click"]
+    },
+    {
+      "question": "Which of the following will correctly attach the styles to the element?<br /><code>const styles = { <br />backgroundColor: '#ff0000'<br /> }</code>",
+      "options": [
+        "<div style=\"styles\"> ... </div>",
+        "<div :class=\"styles\"> ... </div>",
+        "<div @style=\"styles\"> ... </div>",
+        "<div :style=\"styles\"> ... </div>"
+      ],
+      "answer": ["<div :style=\"styles\"> ... </div>"]
+    },
+    {
+      "question": "Which of the following is not a valid lifecycle hook?",
+      "options": [
+        "onMounted",
+        "onErrorCaptured",
+        "onUnmounted",
+        "onActive"
+      ],
+      "answer": ["onActive"]
+    },
+    {
+      "question": "Given the following component definition and usage, what is the actual HTML that will be rendered?<br /><code><template> <br /><slot><br /><span>Default Content</span><br /></slot><br /></template><br /><br /><template> <br /><ContainerWrapper /><br /></template></code>",
+      "options": [
+        "<div></div>",
+        "<ContainerWrapper>Default Content</ContainerWrapper>",
+        "<span>Default Content</span>",
+        "<ContainerWrapper>\n\t<span>Hello World!</span>\n</ContainerWrapper>"
+      ],
+      "answer": ["<span>Default Content</span>"]
+    },
+    {
+      "question": "Given the following component definition, which code block will properly render \"Hello world\" in the slot?<br /><code>// ContainerWrapper.vue<br /><template> <br /><div><slot/></div><br /></template></code>",
+      "options": [
+        "<ContainerWrapper>\n\t<template #div> \n\t\tHello World!\n\t</template>\n</ContainerWrapper>",
+        "<ContainerWrapper>\n\tHello World!\n</ContainerWrapper>",
+        "<ContainerWrapper>\n\t<use-slot>\n\t\tHello World!\n\t</use-slot>\n</ContainerWrapper>",
+        "<ContainerWrapper v-for=\"slot\">\n\tHello World!\n</ContainerWrapper>"
+      ],
+      "answer": ["<ContainerWrapper>\n\tHello World!\n</ContainerWrapper>"]
+    },
+    {
+      "question": "Which of the following is NOT a valid way of defining an async component?",
+      "options": [
+        "const ContainerWrapper = defineAsyncComponent(() =>\n  import('./components/ContainerWrapper.vue')\n)",
+        "const ContainerWrapper = defineAsyncComponent(() => {\n\treturn new Promise((resolve, reject) => {\n\t\tresolve(/* loaded component */)\n\t})\n})",
+        "import async ContainerWrapper from './components/ContainerWrapper.vue'",
+        "const ContainerWrapper = defineAsyncComponent({\n\tloader: () => import('./components/ContainerWrapper.vue'),\n\tloadingComponent: LoadingComponent,\n\tdelay: 200,\n\terrorComponent: ErrorComponent,\n\ttimeout: 3000\n})"
+      ],
+      "answer": ["import async ContainerWrapper from './components/ContainerWrapper.vue'"]
+    },
+    {
+      "question": "Which of the following options correctly implements a watcher with an immediate effect using the Vue.js 3 Composition API?",
+      "options": [
+        "const count = ref(0);\n\nwatch(\n\tcount,\n\t(newValue, oldValue) => {\n\t\tconsole.log(`Counter changed from ${oldValue} to ${newValue}`);\n\t},\n\t{ immediate: true }\n);",
+        "const count = 0;\n\nwatch(\n\tcount,\n\t(newValue, oldValue) => {\n\tconsole.log(`Counter changed from ${oldValue} to ${newValue}`);\n\t},\n\t{ immediate: true }\n);",
+        "const count = ref(0);\n\nwatch(\n  () => count.value,\n  (newValue, oldValue) => {\n    console.log(`Counter changed from ${oldValue} to ${newValue}`);\n  },\n  { immediate: false }\n);",
+        "const count = ref(0);\nwatch(\n  count.value,\n  (newValue, oldValue) => {\n    console.log(`Counter changed from ${oldValue} to ${newValue}`);\n  },\n  { immediate: true }\n);"
+      ],
+      "answer": ["const count = ref(0);\n\nwatch(\n\tcount,\n\t(newValue, oldValue) => {\n\t\tconsole.log(`Counter changed from ${oldValue} to ${newValue}`);\n\t},\n\t{ immediate: true }\n);"]
+    },
+    {
+      "question": "Which of the following options correctly implements template refs?",
+      "options": [
+        "<script setup>  \nconst inputRef = ref(null);\n\nfunction focusInput() {\n  inputRef.value.focus();\n}\n</script>\n<template>\n  <div>\n    <input ref=\"inputRef\" type=\"text\" />\n    <button @click=\"focusInput\">Focus Input</button>\n  </div>\n</template>",
+        "<script setup>  \nconst inputRef = ref(null);\n\nfunction focusInput() {\n  inputRef.value.focus();\n}\n</script>\n<template>\n  <div>\n    <input v-ref=\"inputRef\" type=\"text\" />\n    <button @click=\"focusInput\">Focus Input</button>\n  </div>\n</template>",
+        "<script setup>  \nconst inputRef = ref(null);\n\nfunction focusInput() {\n  inputRef.value.focus();\n}\n</script>\n<template>\n  <div>\n    <input :ref=\"inputRef\" type=\"text\" />\n    <button @click=\"focusInput\">Focus Input</button>\n  </div>\n</template>",
+        "<script setup>  \nconst inputRef = ref(null);\n\nfunction focusInput() {\n  inputRef.value.focus();\n}\n</script>\n<template>\n  <div>\n    <input v-bind:ref=\"inputRef\" type=\"text\" />\n    <button @click=\"focusInput\">Focus Input</button>\n  </div>\n</template>"
+      ],
+      "answer": ["<script setup>  \nconst inputRef = ref(null);\n\nfunction focusInput() {\n  inputRef.value.focus();\n}\n</script>\n<template>\n  <div>\n    <input ref=\"inputRef\" type=\"text\" />\n    <button @click=\"focusInput\">Focus Input</button>\n  </div>\n</template>"]
+    },
+    {
+      "question": "Given the following code, which of the following options correctly implements a fade transition?<br /><code>&lt;script setup&gt;<br />import { ref } from 'vue';<br />const showElement = ref(true);<br />function toggleElement() {<br />  showElement.value = !showElement.value;<br />}<br />&lt;/script&gt;<br />&lt;style scoped&gt;<br />.fade-enter-from,<br />.fade-leave-to {<br />  opacity: 0;<br />}<br /><br />.fade-enter-active,<br />.fade-leave-active {<br />  transition: opacity 0.5s;<br />}<br />&lt;/style&gt;</code>",
+      "options": [
+        "<template>\n  <div>\n    <div v-transition=\"showElement\">Hello, Vue.js!</div>\n    <button @click=\"toggleElement\">Toggle Element</button>\n  </div>\n</template>",
+        "<template>\n  <div>\n    <transition>\n      <div v-if=\"showElement\">Hello, Vue.js!</div>\n    </transition>\n    <button @click=\"toggleElement\">Toggle Element</button>\n  </div>\n</template>",
+        "<template>\n  <div>\n    <transition name=\"fade\">\n      <div v-if=\"showElement\">Hello, Vue.js!</div>\n    </transition>\n    <button @click=\"toggleElement\">Toggle Element</button>\n  </div>\n</template>",
+        "<template>\n  <div>\n    <transition-group>\n      <div v-if=\"showElement\">Hello, Vue.js!</div>\n    </transition-group>\n    <button @click=\"toggleElement\">Toggle Element</button>\n  </div>\n</template>"
+      ],
+      "answer": ["<template>\n  <div>\n    <transition name=\"fade\">\n      <div v-if=\"showElement\">Hello, Vue.js!</div>\n    </transition>\n    <button @click=\"toggleElement\">Toggle Element</button>\n  </div>\n</template>"]
+    },
+    {
+      "question": "Using Vue Router, how would you register the `HomeComponent` to be displayed when visiting the home page (eg. https://example.com/)?",
+      "options": [
+        "defineRoutes([ { uri: '/', component: HomeComponent } ])",
+        "defineRoutes([ { path: '/', component: HomeComponent } ])",
+        "createRouter({ \n    routes:[ { path: '/', component: HomeComponent } ]\n})",
+        "createRouter({ \n    routes:[ { uri: '/', component: HomeComponent } ]\n})"
+      ],
+      "answer": ["createRouter({ \n    routes:[ { path: '/', component: HomeComponent } ]\n})"]
+    },
+    {
+      "question": "In Vue Router, what component should you use to create links between routes?",
+      "options": [
+        "<Link />",
+        "<RouteLink />",
+        "<NavLink />",
+        "<RouterLink />"
+      ],
+      "answer": ["<RouterLink />"]
+    },
+    {
+      "question": "Which of the following best describes Vuetify?",
+      "options": [
+        "A plugin that simplifies the process of creating custom directives in Vue.",
+        "A package that provides additional Vue hooks for accessing the Vue instance and its properties.",
+        "A library that provides a set of reusable Vue composition functions.",
+        "A UI component library for building responsive and mobile-first applications with Vue."
+      ],
+      "answer": ["A UI component library for building responsive and mobile-first applications with Vue."]
+    },
+    {
+      "question": "Which of the following best describes Nuxt?",
+      "options": [
+        "A framework for building server-side rendered Vue applications.",
+        "A library of common transition styles",
+        "A library of re-usable UI elements",
+        "A framework for building mobile apps"
+      ],
+      "answer": ["A framework for building server-side rendered Vue applications."]
+    }
+  ]
+}
