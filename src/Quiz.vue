@@ -11,7 +11,7 @@ function submitAnswer() {
   if (!selectedAnswer.value) {
     return;
   }
-  if (selectedAnswer.value === questions[currentIndex.value].answer) {
+  if (compareAnswers(selectedAnswer.value, questions[currentIndex.value].answer)) {
     score.value++;
   }
   quizState.value = "answered";

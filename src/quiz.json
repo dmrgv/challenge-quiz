@@ -71,7 +71,7 @@
       "answer": ["<SomeCoolComponent v-on:click=\"onClick\" />"]
     },
     {
-      "question": "Which of the following code blocks is the equivalent of the given example?<br /><code>&lt;input type=\"text\" v-model=\"myModelValue\"/&gt;&lt;/code&gt;",
+      "question": "Which of the following code blocks is the equivalent of the given example?<br /><code>&lt;input type=\"text\" v-model=\"myModelValue\"/&gt;</code>",
       "options": [
         "<input \n\ttype=\"text\" \n\t:value=\"myModelValue\" \n\t@input=\"event => myModelValue = event.target.value\"\n/>",
         "<input \n\ttype=\"text\" \n\t@value=\"myModelValue\" \n\t:input=\"event => myModelValue = event.target.value\"\n/>",
@@ -111,7 +111,7 @@
       "answer": ["onActive"]
     },
     {
-      "question": "Given the following component definition and usage, what is the actual HTML that will be rendered?<br /><code><template> <br /><slot><br /><span>Default Content</span><br /></slot><br /></template><br /><br /><template> <br /><ContainerWrapper /><br /></template></code>",
+      "question": "Given the following component definition and usage, what is the actual HTML that will be rendered?<br /><code>&lt;template&gt; <br />&lt;slot&gt;<br />&lt;span&gt;Default Content&lt;/span&gt;<br />&lt;/slot&gt;<br />&lt;/template&gt;<br /><br />&lt;template&gt; <br />&lt;ContainerWrapper /&gt;<br />&lt;/template&gt;</code>",
       "options": [
         "<div></div>",
         "<ContainerWrapper>Default Content</ContainerWrapper>",
@@ -121,7 +121,7 @@
       "answer": ["<span>Default Content</span>"]
     },
     {
-      "question": "Given the following component definition, which code block will properly render \"Hello world\" in the slot?<br /><code>// ContainerWrapper.vue<br /><template> <br /><div><slot/></div><br /></template></code>",
+      "question": "Given the following component definition, which code block will properly render \"Hello world\" in the slot?<br /><code>// ContainerWrapper.vue<br />&lt;template&gt; <br />&lt;div&gt;&lt;slot/&gt;&lt;/div&gt;<br />&lt;/template&gt;</code>",
       "options": [
         "<ContainerWrapper>\n\t<template #div> \n\t\tHello World!\n\t</template>\n</ContainerWrapper>",
         "<ContainerWrapper>\n\tHello World!\n</ContainerWrapper>",
